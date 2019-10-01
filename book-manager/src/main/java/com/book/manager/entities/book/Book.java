@@ -22,7 +22,7 @@ public class Book extends CommonEntity {
     /**
      * 书名
      */
-    private String name;
+    private String bookName;
 
     /**
      * 原价
@@ -37,22 +37,22 @@ public class Book extends CommonEntity {
     /**
      * 作者
      */
-    private String author;
+    private String bookAuthor;
 
     /**
      * 出版社
      */
-    private String press;
+    private String bookPress;
 
     /**
      * 出版时间
      */
-    private String publishTime;
+    private String bookPublishTime;
 
     /**
      * 数量
      */
-    private Long number;
+    private Long bookNumber;
     /**
      * 书的状态
      */
@@ -68,7 +68,7 @@ public class Book extends CommonEntity {
      * 书图片 StringBuilder拼接多个图片 ","分开
      */
     @Column(columnDefinition = "varchar2(500)")
-    private String image;
+    private String bookImage;
     /**
      * 类别id
      */
@@ -76,14 +76,14 @@ public class Book extends CommonEntity {
     /**
      * 用户id
      */
-    private Long userId;
+    private Long studentId;
 
     public String[] getImages() {
-        if (StringUtils.isNoneBlank(image)) {
-            if (image.contains(",")) {
-                return image.split(",");
+        if (StringUtils.isNoneBlank(bookImage)) {
+            if (bookImage.contains(",")) {
+                return bookImage.split(",");
             }
-            return new String[]{image};
+            return new String[]{bookImage};
         }
         return null;
     }

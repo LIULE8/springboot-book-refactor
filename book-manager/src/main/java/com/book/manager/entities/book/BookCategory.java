@@ -18,5 +18,5 @@ public class BookCategory extends CommonEntity {
      */
     @Column(name = "parent_id")
     private Long parentId;
-    private String name;
+    private String bookCategoryName;
 }
