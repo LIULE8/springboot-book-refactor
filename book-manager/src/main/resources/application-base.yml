@@ -1,0 +1,21 @@
+server:
+  port: 9991
+  servlet:
+    context-path: /manager
+spring:
+  application:
+    name: book-manager
+  jpa:
+    show-sql: true
+    open-in-view: false
+  jooq:
+    sql-dialect: h2
+  main:
+    allow-bean-definition-overriding: true
+  #    thymeleaf配置
+  thymeleaf:
+    encoding: utf-8
+    prefix: classpath:/templates/
+
+# 启动可以看springboot启动的详细的log，用于排错使用
+# debug: true
